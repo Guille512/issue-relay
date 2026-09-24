@@ -1,0 +1,11 @@
+{
+  "name": "issue-relay",
+  "version": "1.0.0",
+  "description": "Let your own AI agents, on your own machines, hand work to each other through GitHub Issues: slash-command router, per-agent spend brake, watchdog.",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node template/.github/relay/router.js --self-test && node brake/agent-brake.js --self-test && node tools/check-relay.js --self-test && node test/mutations.js"
+  }
+}

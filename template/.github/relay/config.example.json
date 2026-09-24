@@ -1,0 +1,13 @@
+{
+  "agents": {
+    "planner": [],
+    "frontend": ["frontend-1", "frontend-2"],
+    "infra": [],
+    "assistant": [],
+    "design": ["diseño"]
+  },
+  "humans": ["owner"],
+  "validator": "planner",
+  "labels": { "prefix": "to:", "review": "review", "brake": "agents:brake" },
+  "activation": "2030-01-01T00:00:00Z"
+}

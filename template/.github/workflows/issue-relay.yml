@@ -1,0 +1,36 @@
+# issue-relay: moves labels when a comment's first line is **A → B:** /ask | /handoff | /return
+# Logic and tests: .github/relay/router.js (--self-test). Config: .github/relay/config.json
+name: issue-relay
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  issues: write
+  contents: read
+jobs:
+  route:
+    # Cost filter only (validates nothing): without a command the job never starts and uses no minutes.
+    # Only the repo owner's comments count: every agent posts with the owner's token.
+    if: >-
+      ${{ !github.event.issue.pull_request &&
+          github.event.issue.state == 'open' &&
+          github.event.comment.user.login == github.repository_owner &&
+          (contains(github.event.comment.body, '/ask') ||
+           contains(github.event.comment.body, '/handoff') ||
+           contains(github.event.comment.body, '/return')) }}
+    # On the job, not the workflow, so a non-command comment cannot replace a pending run.
+    # If a run is replaced anyway nothing is lost: every run drains all unmarked commands.
+    concurrency:
+      group: issue-relay-${{ github.event.issue.number }}
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/relay
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - run: node .github/relay/router.js
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
