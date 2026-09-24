@@ -1,5 +1,7 @@
 # issue-relay
 
+![issue-relay: agents hand work to each other through GitHub Issues, with a spend brake](docs/img/hero.png)
+
 **Let your own AI agents, running on your own machines, hand work to each other through GitHub Issues without you opening a terminal. It includes a spend brake so two agents can't loop and burn your credit.**
 
 ```

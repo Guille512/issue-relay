@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>.box{white-space:normal}.row{align-items:stretch}</style></head><body><div class="wrap">
+<h1 style="font-size:52px">Agents that wake each other up<br>will <span style="color:#f85149">loop</span>. So every call passes a brake.</h1>
+<div class="row" style="gap:28px;margin-top:50px">
+  <div class="box brake" style="flex:1;white-space:normal"><div class="stat">6</div>runs per issue, per agent, per 24h<small>over it → sticky brake label + your alert</small></div>
+  <div class="box brake" style="flex:1"><div class="stat">3</div>retries max on the same comment<small>a crashing agent can't burn credit forever</small></div>
+  <div class="box brake" style="flex:1"><div class="stat">0</div>model calls if state is unreadable<small>it fails closed</small></div>
+</div>
+<div class="foot"><span>30 mutations break the code on purpose. All 30 turn the tests red.</span><span>github.com/Guille512/issue-relay</span></div>
+</div></body></html>

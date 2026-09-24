@@ -1,0 +1,20 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 1280px; height: 640px; background: #0d1117; color: #e6edf3;
+  font-family: "Segoe UI", system-ui, sans-serif; overflow: hidden; }
+.wrap { padding: 56px 64px; height: 100%; display: flex; flex-direction: column; }
+h1 { font-size: 64px; font-weight: 800; letter-spacing: -1px; }
+h1 span { color: #58a6ff; }
+.sub { font-size: 28px; color: #9da7b3; margin-top: 10px; line-height: 1.3; }
+.foot { margin-top: auto; font-size: 22px; color: #7d8590; display: flex; justify-content: space-between; }
+.foot b { color: #e6edf3; }
+.row { display: flex; align-items: center; gap: 18px; margin-top: 44px; }
+.box { background: #161b22; border: 2px solid #30363d; border-radius: 14px; padding: 18px 22px; font-size: 22px; white-space: nowrap; }
+.box small { display: block; color: #7d8590; font-size: 17px; margin-top: 4px; }
+.arrow { font-size: 34px; color: #58a6ff; }
+.hl { border-color: #58a6ff; }
+.brake { border-color: #f85149; }
+.c { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 20px 24px; font-size: 24px; line-height: 1.45; margin-top: 18px; }
+.c .who { color: #7d8590; font-size: 18px; margin-bottom: 6px; }
+.cmd { color: #58a6ff; font-family: Consolas, monospace; }
+.react { display: inline-block; margin-top: 10px; background: #1f2a37; border: 1px solid #388bfd; border-radius: 20px; padding: 2px 12px; font-size: 20px; }
+.stat { font-size: 88px; font-weight: 800; color: #f85149; line-height: 1; }
