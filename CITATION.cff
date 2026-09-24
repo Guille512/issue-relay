@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use issue-relay (the command router, the per-agent brake or the watchdog), please cite it as below."
+title: "issue-relay: AI agents hand work to each other through GitHub Issues, with a spend brake"
+authors:
+  - family-names: "Fernández"
+    given-names: "Guillermo"
+repository-code: "https://github.com/Guille512/issue-relay"
+url: "https://github.com/Guille512/issue-relay"
+license: MIT
+date-released: 2026-09-24
